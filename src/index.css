@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-handwriting: "Caveat", cursive;
+
+  --color-primary: #2a4bd9;
+  --color-primary-dim: #173dcd;
+  --color-primary-container: #879aff;
+  --color-on-primary: #f2f1ff;
+  
+  --color-surface: #f9f5ff;
+  --color-surface-bright: #f9f5ff;
+  --color-surface-dim: #d3d0ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2eeff;
+  --color-surface-container: #e9e5ff;
+  --color-surface-container-high: #e3dfff;
+  --color-surface-container-highest: #dcd9ff;
+  
+  --color-on-surface: #2c2a51;
+  --color-on-surface-variant: #595781;
+  
+  --color-outline: #75729e;
+  --color-outline-variant: #aba8d7;
+  
+  --color-tertiary: #923881;
+  --color-secondary: #534db6;
+  --color-error: #b41340;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-body text-on-surface antialiased;
+  }
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dim) 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.qr-grid-pattern {
+  background-image: radial-gradient(circle at 2px 2px, var(--color-outline-variant) 1px, transparent 0);
+  background-size: 24px 24px;
+}
